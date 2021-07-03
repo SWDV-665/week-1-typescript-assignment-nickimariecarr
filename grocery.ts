@@ -22,3 +22,12 @@ let groceryList=[
     new Grocery("Butter","E3475",1,2.99,"Out of Stock")
 
 ]
+//HTML access application ID
+const element = document.getElementById("application");
+
+// creates a p element for every item that is listed, and append to HTML output page
+groceryList.forEach(e => {
+    const p = document.createElement("p");
+    p.textContent = `Item: ${e.name} ||  SKU: ${e.SKU} ||  Qty:${e.quantity} ||  Price:$${e.price} || Stock:${e.stock}`;
+    element.appendChild(p);
+  });
